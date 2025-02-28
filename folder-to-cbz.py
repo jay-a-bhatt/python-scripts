@@ -20,7 +20,7 @@ def compress_images_to_cbz(input_directory, export_directory):
         folder_path = os.path.join(input_directory, foldername)
         
         if os.path.isdir(folder_path):
-            valid_extensions = ['.jpg', '.jpeg', '.png']
+            valid_extensions = ['.jpg', '.jpeg', '.png', '.webp', '.gif', '.xml']
             for filename in os.listdir(folder_path):
                 if not any(filename.lower().endswith(ext) for ext in valid_extensions):
                     print(f"Error: {foldername} contains non-image files.")
